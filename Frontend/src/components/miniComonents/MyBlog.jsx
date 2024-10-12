@@ -16,7 +16,7 @@ const MyBlog = () => {
 
   const deleteBlogHandler = async (id) => {
     try {
-      const { data } = await axios.delete(`http://localhost:4000/api/v1/blog/delete/${id}`, { withCredentials: true });
+      const { data } = await axios.delete(`https://yatharth-gyan-backend.onrender.com/api/v1/blog/delete/${id}`, { withCredentials: true });
       toast.success(data.message);
       // This is used to refreshing all other blogs when any one get deleted!
       setMyBlogs(myBlogs.filter((element) => element._id !== id));
