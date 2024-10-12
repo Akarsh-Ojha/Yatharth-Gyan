@@ -8,7 +8,7 @@ const MyBlog = () => {
 
   useEffect(() => {
     const fetchMyBlog = async () => {
-      const { data } = await axios.get("http://localhost:4000/api/v1/blog/myblogs", { withCredentials: true });
+      const { data } = await axios.get("https://yatharth-gyan-backend.onrender.com/api/v1/blog/myblogs", { withCredentials: true });
       setMyBlogs(data.blogs);
     };
     fetchMyBlog();
