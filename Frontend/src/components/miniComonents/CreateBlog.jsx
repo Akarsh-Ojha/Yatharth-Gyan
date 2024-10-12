@@ -97,7 +97,7 @@ const CreateBlog = () => {
     }
 
     try {
-      const { data } = await axios.post("http://localhost:4000/api/v1/blog/post", formData, { withCredentials: true, headers: { "Content-Type": "multipart/form-data" } });
+      const { data } = await axios.post("https://yatharth-gyan-backend.onrender.com/api/v1/blog/post", formData, { withCredentials: true, headers: { "Content-Type": "multipart/form-data" } });
 
       setTitle("");
       setMainImage("");
