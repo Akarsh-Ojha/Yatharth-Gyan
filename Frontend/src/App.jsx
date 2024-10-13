@@ -40,8 +40,7 @@ const App = () => {
     const fetchBlogs = async () => {
       try {
         const { data } = await axios.get(
-          "https://yatharth-gyan-backend.onrender.com/api/v1/user/myprofile/api/v1/blog/all",
-          { withCredentials: true }
+          "https://yatharth-gyan-backend.onrender.com/api/v1/user/myprofile/api/v1/blog/all"
         );
         setBlogs(data.allBlogs);
       } catch (error) {
