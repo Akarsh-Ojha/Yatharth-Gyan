@@ -12,7 +12,7 @@ const SingleBlog = () => {
   useEffect(() => {
     const getSingleBlog = async () => {
       try {
-        const { data } = await axios.get(`https://yatharth-gyan-backend.onrender.com/api/v1/blog/singleblog/${id}`, { withCredentials: true });
+        const { data } = await axios.get(`https://yatharth-gyan-backend.onrender.com/api/v1/blog/singleblog/${id}`);
         setBlog(data.blog);
       } catch (error) {
         setBlog({});
