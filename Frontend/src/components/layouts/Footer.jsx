@@ -6,7 +6,7 @@ import { FaGitSquare, FaWhatsapp } from 'react-icons/fa';
 
 
 const Footer = () => {
-  const isDashboard = useLocation("http://localhost:5173/dashboard");
+  const isDashboard = useLocation("https://yatharth-gyan-frontend.onrender.com/dashboard");
   const { mode, setMode } = useContext(Context);
   
   return (
