@@ -8,7 +8,7 @@ const PopularAuthor = () => {
   const navigate = useNavigate();
   useEffect(()=>{
     const fetchUser = async()=>{
-      const {data} = await axios.get("http://localhost:4000/api/v1/user/authors",{withCredentials:true});
+      const {data} = await axios.get("https://yatharth-gyan-backend.onrender.com/api/v1/user/authors",{withCredentials:true});
       setAuthors(data.authors);
       // console.log(data.authors);
     }

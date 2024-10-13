@@ -17,7 +17,7 @@ const Sidebar = ({ setComponent }) => {
     e.preventDefault();
     try {
       const { data } = await axios.get(
-        "http://localhost:4000/api/v1/user/logout",
+        "https://yatharth-gyan-backend.onrender.com/api/v1/user/logout",
         { withCredentials: true }
       );
       setIsAuthenticated(false);

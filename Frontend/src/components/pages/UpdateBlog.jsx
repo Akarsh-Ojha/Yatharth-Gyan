@@ -31,7 +31,7 @@ const UpdateBlog = () => {
 
     const fetchBlog = async ()=>{
       try {
-        const {data} = await axios.get(`http://localhost:4000/api/v1/blog/singleblog/${id}`, {withCredentials: true});
+        const {data} = await axios.get(`https://yatharth-gyan-backend.onrender.com/api/v1/blog/singleblog/${id}`, {withCredentials: true});
 
         setTitle(data.blog.title);
         setCategory(data.blog.category);
@@ -93,7 +93,7 @@ const UpdateBlog = () => {
       }
 
       try {
-        const {data} = await axios.put(`http://localhost:4000/api/v1/blog/update/${id}`, updateData, {withCredentials: true});
+        const {data} = await axios.put(`https://yatharth-gyan-backend.onrender.com/api/v1/blog/update/${id}`, updateData, {withCredentials: true});
         toast.success(data.message);
       }      
       catch (error) {

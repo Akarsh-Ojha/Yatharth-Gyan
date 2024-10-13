@@ -40,7 +40,7 @@ const Register = () => {
     formData.append("avatar", avatar);
 
     try {
-      const {data} = await axios.post("http://localhost:4000/api/v1/user/register", 
+      const {data} = await axios.post("https://yatharth-gyan-backend.onrender.com/api/v1/user/register", 
       formData, {withCredentials: true, headers: {"Content-Type": "multipart/form-data"}},);
       toast.success(data.message);
       setName("");

@@ -9,7 +9,7 @@ import SingleBlog from "../src/components/pages/SingleBlog";
 import Navbar from "../src/components/layouts/Navbar";
 import Footer from "../src/components/layouts/Footer";
 import { Toaster } from "react-hot-toast";
-import Dashboard from "./components/pages/Dashboard";
+import Dashboard from "../components/pages/DashBoard";
 import Register from "./components/pages/Register";
 import Login from "./components/pages/Login";
 import AllAuthors from "./components/pages/AllAuthor";
@@ -24,7 +24,7 @@ const App = () => {
     const fetchUser = async () => {
       try {
         const { data } = await axios.get(
-          "http://localhost:4000/api/v1/user/myprofile",
+          "https://yatharth-gyan-backend.onrender.com/api/v1/user/myprofile",
           {
             withCredentials: true,
           }
@@ -40,7 +40,7 @@ const App = () => {
     const fetchBlogs = async () => {
       try {
         const { data } = await axios.get(
-          "http://localhost:4000/api/v1/blog/all",
+          "https://yatharth-gyan-backend.onrender.com/api/v1/user/myprofile/api/v1/blog/all",
           { withCredentials: true }
         );
         setBlogs(data.allBlogs);
@@ -63,7 +63,7 @@ const App = () => {
           <Route path="/blog/:id" element={<SingleBlog />} />
           <Route path="/about" element={<About />} />
           <Route path="/authors" element={<AllAuthors />} />
-          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/dashboard" element={<DashBoard />} />
           <Route path="/blog/update/:id" element={<UpdateBlog />} />
         </Routes>
         <Footer />
