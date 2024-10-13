@@ -9,7 +9,7 @@ import SingleBlog from "../src/components/pages/SingleBlog";
 import Navbar from "../src/components/layouts/Navbar";
 import Footer from "../src/components/layouts/Footer";
 import { Toaster } from "react-hot-toast";
-import Dashboard from "./components/pages/Dashboard";
+import Dashboard from "../components/pages/DashBoard";
 import Register from "./components/pages/Register";
 import Login from "./components/pages/Login";
 import AllAuthors from "./components/pages/AllAuthor";
@@ -63,7 +63,7 @@ const App = () => {
           <Route path="/blog/:id" element={<SingleBlog />} />
           <Route path="/about" element={<About />} />
           <Route path="/authors" element={<AllAuthors />} />
-          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/dashboard" element={<DashBoard />} />
           <Route path="/blog/update/:id" element={<UpdateBlog />} />
         </Routes>
         <Footer />
