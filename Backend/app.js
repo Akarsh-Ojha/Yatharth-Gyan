@@ -14,7 +14,7 @@ dotenv.config({path:"./config/config.env"});
 
 // use is used to use middleware and cors is used to enable cross origin resource sharing
 app.use(cors({
-    origin:["https://yatharth-gyan-frontend.onrender.com"],
+    origin:"https://yatharth-gyan-frontend.onrender.com",
     methods:["GET","POST","PUT","DELETE"],
     credentials:true
 }))
