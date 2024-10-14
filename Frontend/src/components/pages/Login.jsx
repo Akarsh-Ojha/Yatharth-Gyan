@@ -39,7 +39,6 @@ const Login = () => {
           <select value={role} onChange={(e) => setRole(e.target.value)}>
             <option value="">Select Role</option>
             <option value="Author">Author</option>
-            {/* <option value="Reader">Reader</option> */}
           </select>
           
           <div>
@@ -57,9 +56,6 @@ const Login = () => {
                 placeholder='Password'/>
                 
           </div>
-          
-          
-          {/* <p>Don't have an account? <Link to="/register">Register now</Link></p> */}
           <button type='submit' className='submit-btn'>Login</button>
         </form>
       </section>
