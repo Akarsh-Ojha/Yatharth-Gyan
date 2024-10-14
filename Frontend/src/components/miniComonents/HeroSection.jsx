@@ -17,7 +17,8 @@ const HeroSection = () => {
               onMouseLeave={() => setHoveredIndex(null)}
             >
               <img src={element.mainImage.url} alt="blog" className="blogImg absolute" />
-              {hoveredIndex === index && <div>
+              {hoveredIndex != index &&
+                <div>
                 <h1 className="glow">{element.title}</h1>
                 <div className="writer_section">
                   <div className="author">
@@ -25,8 +26,8 @@ const HeroSection = () => {
                     <p>{element.authorName}</p>
                   </div>
                 </div>
-              </div>
-              }
+              </div>}
+              
             </Link>
           );
         })
