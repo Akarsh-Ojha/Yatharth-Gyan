@@ -55,7 +55,6 @@ const App = () => {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
           <Route path="/blogs" element={<Blogs />} />
           <Route path="/blog/:id" element={<SingleBlog />} />
