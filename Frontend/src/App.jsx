@@ -10,7 +10,6 @@ import Navbar from "../src/components/layouts/Navbar";
 import Footer from "../src/components/layouts/Footer";
 import { Toaster } from "react-hot-toast";
 import DashBoard from "./components/pages/DashBoard";
-import Register from "./components/pages/Register";
 import Login from "./components/pages/Login";
 import AllAuthors from "./components/pages/AllAuthor";
 import { Context } from "./main";
