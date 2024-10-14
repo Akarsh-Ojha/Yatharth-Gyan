@@ -1,4 +1,4 @@
-import React, { useContext,useState } from "react";
+import React, { useContext, useState } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { Context } from "../../main";
@@ -34,36 +34,39 @@ const TrendingBlogs = () => {
     }
   };
 
-  return(
+  return (
     <div className="trending">
       <h3>Trending</h3>
       <Carousel responsive={responsive}>
         {
-          blogs && blogs.length > 0 ? 
-          (blogs.slice(0,4).map((element,index) => {
-            return (
-              <Link to={`/blog/${element._id}`} className="card" key={element._id} onMouseEnter={() => setHoverIndex(index)} onMouseLeave={() => setHoverIndex(null)}>
-                <img src={element.mainImage.url} alt="blog"  className="blogImg"/>
-                {hoverIndex==index && 
-                <div>
-                  <span className="category">{element.category}</span>
-                <h4 className='glow'>{element.title}</h4>
-                <div className="writer_section">
-                  <div className="author">
-                    <img src={element.authorAvatar} alt="Author Avatar"  className="img-shadow"/>
-                    <p>{element.authorName}</p>
-                  </div>
-                </div>
-                </div>
-                }
-              </Link>
+          blogs && blogs.length > 0 ?
+            (blogs.slice(0, 4).map((element, index) => {
+              return (
+                <Link to={`/blog/${element._id}`} className="card" key={element._id} onMouseEnter={() => setHoverIndex(index)} onMouseLeave={() => setHoverIndex(null)}>
+                  <img src={element.mainImage.url} alt="blog" className="blogImg" />
+                  {
+                    hoverIndex != index &&
+                    <div>
+                      <span className="category">{element.category}</span>
+                      <h4 className='glow'>{element.title}</h4>
+                      <div className="writer_section">
+                        <div className="author">
+                          <img src={element.authorAvatar} alt="Author Avatar" className="img-shadow" />
+                          <p>{element.authorName}</p>
+                        </div>
+                      </div>
+                    </div>
+            }
+                </Link>
+              )
+            }
             )
-          })) 
-          : (
-            <BeatLoader size={30} color="gray" />
-          )
+            )
+            : (
+              <BeatLoader size={30} color="gray" />
+            )
         }
-  </Carousel>
+      </Carousel>
     </div>
   )
 }
