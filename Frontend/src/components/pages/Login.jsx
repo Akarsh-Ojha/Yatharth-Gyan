@@ -7,7 +7,7 @@ const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [role, setRole] = useState('');
-  const { mode, isAuthenticate,setIsAuthenticate} = useContext(Context);
+  const { mode, isAuthenticate} = useContext(Context);
   const navigateTo = useNavigate();
   const handelLogin = async (e) => {
     e.preventDefault();
