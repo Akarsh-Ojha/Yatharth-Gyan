@@ -16,7 +16,6 @@ const Login = () => {
       { withCredentials: true, headers: { "Content-Type": "application/json" } })
       .then(res => {
         toast.success(res.data.message);
-        setIsAuthenticate(true);
         setEmail('');
         setPassword('');
         setRole('');
