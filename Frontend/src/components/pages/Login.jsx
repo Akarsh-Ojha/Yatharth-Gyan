@@ -7,7 +7,7 @@ const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [role, setRole] = useState('');
-  const { mode, isAuthenticate} = useContext(Context);
+  const { mode, isAuthenticate,setIsAuthenticate} = useContext(Context);
   const navigateTo = useNavigate();
   const handelLogin = async (e) => {
     e.preventDefault();
@@ -16,10 +16,12 @@ const Login = () => {
       { withCredentials: true, headers: { "Content-Type": "application/json" } })
       .then(res => {
         toast.success(res.data.message);
+        setIsAuthenticate(true);
         setEmail('');
         setPassword('');
         setRole('');
         navigateTo('/'); 
+        
         window.location.reload();
       })
       .catch((error) =>{
