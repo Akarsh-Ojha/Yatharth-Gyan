@@ -31,7 +31,7 @@ const App = () => {
         setUser(data.user);
         setIsAuthenticated(true);
       } catch (error) {
-        console.log(error);
+        console.log(error+"occur here");
         setIsAuthenticated(false);
         setUser({});
       }
